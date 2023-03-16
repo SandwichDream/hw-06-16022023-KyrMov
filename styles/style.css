@@ -80,18 +80,18 @@ header>div>a{
 }
 
 
-.h-main section{
+.icons{
     margin-top: 270px;
     height: 200px;
-    width: 20px;
+    width: 5%;
 }
-.h-main section>ul{
+.icons>ul{
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.h-main section>ul li{
+.icons>ul li{
     margin-bottom: 20px;
 }
 .follow{
@@ -105,11 +105,17 @@ header>div>a{
 
 
 .title{
-    margin-left: 200px;
-    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 80px;
+    width: 95%;
 }
-.title>h1{
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title>div>h1{
     font-size: 1em;
 }
 
@@ -126,22 +132,26 @@ header>div>a{
 
 /* Main */
 .main{
-    padding: 0 230px;
+    padding: 0 10%;
 }
 .main section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.m-section1{
     position: relative;
     bottom: 200px;
 }
-.image01{ /* Проблема!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-    background-image: url("../images/image1.png");
+.image{
     background-size: cover;
     flex-shrink: 0;
-    width: 600px;
+    width: 40%;
     height: 720px;
-    margin-right: 300px;
+}
+.o1{
+    background-image: url("../images/image1.png");
+    margin-right: 20%;
 }
 .content{
     font-size: 18px;
@@ -162,9 +172,58 @@ header>div>a{
     margin-left: 10px;
 }
 
+.image02{
+    background-image: url("../images/image2.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.image02 h1{
+    margin-bottom: 20px;
+}
+.top{
+    position: relative;
+    bottom: 5%;
+    padding: 30px;
+}
+.bottom{
+    padding: 100px 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bromo{
+    color: var(--second-color);
+}
+.bromo::before, .bromo::after{
+    content: "";
+    border: 1px solid var(--second-color);
+    width: 4.375rem;
+    display: inline-block;
+    position: relative;
+    bottom: 0.25rem;
+}
+
+
+.m-section2{
+    margin-top: 100px;
+}
+
+.o3{
+    background-image: url("../images/image3.png");
+    margin-left: 20%;
+}
 
 /* Footer */
 
+.footer{
+    margin-top: 100px;
+}
 .footer>header>div>button{
     margin-left: 55px;
     padding: 25px 70px;
@@ -192,6 +251,7 @@ hr{
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     background-color: transparent;
+    color: white;
 }
 .footer>main>div>div>button{
     padding: 27px 30px;
@@ -238,152 +298,82 @@ hr{
     background-color: #ee902c;
 }
 
-@media(max-width:1700px){
-    .content{
-        font-size: 16px;
+@media(max-width: 1350px){
+    .m-section1{
+        flex-direction: column;
     }
-    .image01{
-        width: 500px;
-        height: 600px;
-        margin-right: 200px;
+    .m-section2{
+        flex-direction: column-reverse;
+    }
+    .image{
+        width: 600px;
+    }
+    .o1{
+        margin-right: 0;
+    }
+    .o3{
+        margin-left: 0;
     }
 }
-
-@media(max-width:1530px){
-    .image01{
-        width: 400px;
-        height: 480px;
-        margin-right: 180px;
+@media(max-width:1200px){
+    .Hero>header{
+        flex-direction: column;
+        align-items: center;
     }
-}
-
-@media(max-width:1420px){
-    .content{
-        font-size: 14px;
+    .Hero>header>ul{
+        margin: 30px auto;
+    }
+    .Hero>main>section{
+        margin-top: 50px;
     }
     .title{
         font-size: 60px;
-    }
-    .main{
-        padding: 0 150px;
-    }
-}
-
-@media(max-width:1350px){
-    .image01{
-        width: 300px;
-        height: 360px;
-        margin-right: 150px;
-    }
-}
-
-@media(max-width:1230px){
-    .content{
-        font-size: 12px;
-    }
-    html,body{
-        font-size: 12px;
-    }
-}
-
-@media(max-width:1035px){
-    header{
-        align-items: center;
-        flex-direction: column;
-    }
-    .h-main section{
-        margin-top: 50px;
-    }
-    header>ul{
-        margin: 30px 0;
-    }
-    .title{
-        font-size: 40px;
-        margin-top: 40px;
+        justify-content: flex-end;
     }
     .scroll_down{
-        margin-top: 0;
+        margin-top: 10px;
     }
-    .image01{
-        width: 200px;
-        height: 240px;
-        margin-right: 130px;
+    .m-section1{
+        bottom: 0;
     }
-    .content{
-        font-size: 10px;
+    .image02{
+        height: 80vh;
     }
-    .footer>main{
-        flex-wrap: wrap;
+    .top{
+        bottom: -5%;
     }
     .footer>header{
         flex-direction: column;
+        align-items: center;
     }
-    .footer>header>h1{
+    .footer>header h1{
         margin-bottom: 30px;
     }
-}
-
-@media(max-width:870px){
-    .content{
-        font-size: 10px;
+    .f-main{
+        flex-wrap: wrap;
+        margin: 0;
     }
-    .main{
-        padding: 0 100px;
+    .f-main>div{
+        width: 100%;
     }
 }
-
-@media(max-width:760px){
-
-    .footer>footer>div{
-        display: flex;
-        flex-direction: column;
-    }
-    .footer>footer>ul{
-        display: flex;
-        flex-direction: column;
-    }
-    .BG.Hero{
-        padding: 42px;
-    }
-    .content{
-        font-size: 8px;
-    }
-    .image01{
-        margin-right: 100px;
-    }
-    .main section{
-        bottom: 100px;
-    }
-}
-
-@media(max-width:670px){
-    html, body{
-        font-size: 14px;
-    }
-    .BG.Hero{
-        padding: 21px;
-    }
-    header{
-        align-items: center;
-        flex-direction: column;
-    }
-    header>ul a{
-        margin: 0 12px;
-    }
-    .h-main section{
-        margin-top: 50px;
-    }
-    header>ul{
-        margin: 30px 0;
-    }
+@media(max-width:950px){
     .title{
-        font-size: 40px;
-        margin-top: 40px;
+        width: 50%;
     }
-    .content{
-        font-size: 6px;
+    .header>main>section{
+        width: 2.5%;
     }
-    .image01{
-        margin-right: 70px;
+    .top{
+        bottom: 5%;
+    }
+    .bottom{
+        padding: 50px;
+    }
+}
+@media(max-width:800px){
+    .footer>footer>div, .footer>footer>ul{
+        display: flex;
+        flex-direction: column;
     }
 }
