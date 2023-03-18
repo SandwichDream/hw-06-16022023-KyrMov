@@ -13,7 +13,6 @@ html, body{
 .BG{
     background-image: url("../images/BG.png");
     background-size: cover;
-    height: 100vw;
 }
 .BG.Hero{
     background-image: url("../images/BGHero.png");
@@ -306,7 +305,7 @@ hr{
         flex-direction: column-reverse;
     }
     .image{
-        width: 600px;
+        width: 100%;
     }
     .o1{
         margin-right: 0;
@@ -375,5 +374,30 @@ hr{
     .footer>footer>div, .footer>footer>ul{
         display: flex;
         flex-direction: column;
+    }
+}
+@media(max-width:600px){
+    .BG.Hero{
+        padding: 10px;
+    }
+    header>ul a{
+        margin: 0 10px;
+    }
+    .title{
+        font-size: 39px;
+    }
+    .BG{
+        margin-bottom: 100px;
+    }
+    .image02{
+        font-size: 14px;
+    }
+    .bromo::before, .bromo::after{
+        content: "";
+        border: 1px solid var(--second-color);
+        width: 10px;
+        display: inline-block;
+        position: relative;
+        bottom: 4px;
     }
 }
